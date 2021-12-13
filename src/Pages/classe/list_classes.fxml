@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pages.classe.gestionClasseController">
+   <children>
+      <AnchorPane layoutX="-6.0" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <ImageView fitHeight="578.0" fitWidth="694.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/co_working.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtIdentifiant" layoutX="14.0" layoutY="66.0" promptText="Identifiant" />
+            <TextField fx:id="txtNiveau" layoutX="15.0" layoutY="114.0" promptText="Niveau" />
+            <TextField fx:id="txtFilliere" layoutX="16.0" layoutY="159.0" promptText="Filliere" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="16.0" layoutY="8.0" onMouseClicked="#back_to_main" onMousePressed="#back_to_main" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tabClasse" editable="true" layoutX="180.0" layoutY="58.0" prefHeight="270.0" prefWidth="513.0">
+              <columns>
+                <TableColumn fx:id="ID_Column" prefWidth="75.0" text="Identifiant" />
+                <TableColumn fx:id="Niv_Col" prefWidth="75.0" text="Niveau" />
+                  <TableColumn fx:id="F_Col" prefWidth="92.79998779296875" text="Filliere" />
+                  <TableColumn fx:id="NB_Col" prefWidth="108.79998779296875" text="Nombre_etudiants" />
+                  <TableColumn fx:id="Emp_Col" prefWidth="154.4000244140625" text="Emploi" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="DltBtn" buttonType="RAISED" disable="true" layoutX="197.0" layoutY="343.0" onAction="#delete_classe" prefHeight="27.0" prefWidth="126.0" text="Delete" />
+            <JFXButton fx:id="btnStudent" buttonType="RAISED" disable="true" layoutX="373.0" layoutY="343.0" onAction="#see_students" prefHeight="27.0" prefWidth="126.0" text="Students" />
+            <JFXButton fx:id="btnTeachers" buttonType="RAISED" disable="true" layoutX="545.0" layoutY="343.0" onAction="#see_teachers" prefHeight="27.0" prefWidth="126.0" text="Teachers" />
+            <JFXButton fx:id="AddBtn" layoutX="28.0" layoutY="343.0" onAction="#ajouter_classe" prefHeight="27.0" prefWidth="126.0" text="Add" />
+            <Text fx:id="textError" fill="#ff0707" layoutX="260.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                   " textAlignment="CENTER" wrappingWidth="150.39999999999998">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/mainwindow.css" />
+      <URL value="@../css/LoginStyling.css" />
+   </stylesheets>
+</AnchorPane>

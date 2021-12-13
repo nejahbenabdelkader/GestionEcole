@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="Pages.classe.list_etudiantsController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="700.0">
+         <children>
+            <TableView fx:id="tab_etudiant" layoutX="25.0" layoutY="75.0" prefHeight="200.0" prefWidth="582.0">
+              <columns>
+                <TableColumn fx:id="cin" prefWidth="84.79998588562012" text="CIN" />
+                <TableColumn fx:id="nom" prefWidth="74.39997100830078" text="    Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="78.39996337890625" text="Prenom" />
+                  <TableColumn fx:id="Sexe" prefWidth="82.39996337890625" text="Sexe" />
+                  <TableColumn fx:id="mail" editable="false" prefWidth="143.199951171875" text="Mail" />
+                  <TableColumn fx:id="tel" prefWidth="114.39999389648438" text="Tel" />
+              </columns>
+               <stylesheets>
+                  <URL value="@../css/mainwindow.css" />
+                  <URL value="@../css/LoginStyling.css" />
+               </stylesheets>
+            </TableView>
+            <JFXButton layoutX="14.0" layoutY="14.0" onAction="#back_to_main" text="  ">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

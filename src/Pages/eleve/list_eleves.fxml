@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pages.eleve.list_elevesController">
+   <children>
+      <AnchorPane layoutX="-43.0" layoutY="-56.0" prefHeight="400.0" prefWidth="921.0">
+         <children>
+            <TableView fx:id="tab_student" editable="true" layoutX="55.0" layoutY="100.0" prefHeight="284.0" prefWidth="755.0">
+              <columns>
+                <TableColumn fx:id="cin" prefWidth="75.0" text="CIN" />
+                <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="75.0" text="Prenom" />
+                  <TableColumn fx:id="date_naissance" prefWidth="108.79998779296875" text="date_naissance" />
+                  <TableColumn fx:id="sex" prefWidth="51.20001220703125" text="Sexe" />
+                  <TableColumn fx:id="tel" prefWidth="88.0" text="Tel" />
+                  <TableColumn fx:id="email" prefWidth="185.60003662109375" text="Email" />
+                  <TableColumn fx:id="id_classe" prefWidth="91.20001220703125" text="ID_Classe" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="828.0" layoutY="108.0" onAction="#add_student" prefHeight="26.0" prefWidth="96.0" text="Add" />
+            <JFXButton fx:id="btnDelete" disable="true" layoutX="828.0" layoutY="200.0" onAction="#delete_student" prefHeight="27.0" prefWidth="96.0" text="Delete" />
+            <JFXButton fx:id="btnChange" disable="true" layoutX="828.0" layoutY="284.0" onAction="#modify_student" prefHeight="27.0" prefWidth="96.0" text="change" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="44.0" layoutY="50.0" onMouseClicked="#back_to_main" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="50.0">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+         </children>
+         <stylesheets>
+            <URL value="@../css/menusdef.css" />
+            <URL value="@../css/MaterialDesign.css" />
+            <URL value="@../css/LoginStyling.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

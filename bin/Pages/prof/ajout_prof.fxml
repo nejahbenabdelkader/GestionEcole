@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pages.prof.ajout_profController">
+   <children>
+      <AnchorPane layoutX="6.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="404.0" fitWidth="620.0" layoutX="50.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/prof.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#back_to_profs" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="cinLabel" layoutX="99.0" layoutY="97.0" prefHeight="18.0" prefWidth="94.0" text="    " textFill="#ff0606" />
+            <Label fx:id="prenomLabel" layoutX="91.0" layoutY="214.0" prefHeight="18.0" prefWidth="94.0" text="   " textFill="#d41414" />
+            <Label fx:id="telLabel" layoutX="91.0" layoutY="267.0" prefHeight="18.0" prefWidth="94.0" text="   " textFill="#dc0f0f" />
+            <Label layoutX="350.0" layoutY="157.0" text="    " textFill="#dc0a0a" />
+            <Label fx:id="nomLabel" layoutX="350.0" layoutY="214.0" text="   " textFill="#ec0d0d" />
+            <Label fx:id="emailLabel" layoutX="352.0" layoutY="267.0" text="   " textFill="#ef0c0c" />
+            <JFXComboBox fx:id="matiere_enseigne" layoutX="91.0" layoutY="106.0" prefHeight="28.0" prefWidth="175.0" promptText="Matiere" />
+            <JFXComboBox fx:id="sexe" layoutX="350.0" layoutY="47.0" prefHeight="28.0" prefWidth="175.0" promptText="Genre" />
+            <Button layoutX="250.0" layoutY="337.0" mnemonicParsing="false" onAction="#add_prof" prefHeight="32.0" prefWidth="145.0" text="Add" />
+            <Text fx:id="succesLabel" fill="#08b113" layoutX="584.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="pseudo" layoutX="91.0" layoutY="268.0" prefHeight="34.0" prefWidth="175.0" promptText="Pseudo" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+            <TextField fx:id="password" layoutX="343.0" layoutY="268.0" prefHeight="34.0" prefWidth="175.0" promptText="password" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+            <TextField fx:id="cin" layoutX="91.0" layoutY="44.0" prefHeight="34.0" prefWidth="175.0" promptText="CIN" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+            <TextField fx:id="tel" layoutX="91.0" layoutY="215.0" prefHeight="34.0" prefWidth="175.0" promptText="Tel" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+            <TextField fx:id="nom" layoutX="343.0" layoutY="157.0" prefHeight="34.0" prefWidth="175.0" promptText="nom" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+            <TextField fx:id="prenom" layoutX="91.0" layoutY="157.0" prefHeight="34.0" prefWidth="175.0" promptText="prenom" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+            <TextField fx:id="salaire" layoutX="350.0" layoutY="100.0" prefHeight="34.0" prefWidth="175.0" promptText="Salaire" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+            <TextField fx:id="email" layoutX="343.0" layoutY="214.0" prefHeight="34.0" prefWidth="175.0" promptText="Email" style="-fx-border-color: #24ACF2;" stylesheets="@../css/MaterialDesign.css" />
+         </children>
+         <stylesheets>
+            <URL value="@../css/menusdef.css" />
+            <URL value="@../css/LoginStyling.css" />
+            <URL value="@../css/MaterialDesign.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

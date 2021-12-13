@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pages.prof.list_profController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="926.0">
+         <children>
+            <TreeTableView fx:id="tabProf" layoutX="12.0" layoutY="54.0" prefHeight="324.0" prefWidth="761.0">
+              <columns>
+                <TreeTableColumn fx:id="cin" prefWidth="80.79998970031738" text="CIN" />
+                <TreeTableColumn fx:id="nom" prefWidth="74.39998626708984" text="Nom" />
+                  <TreeTableColumn fx:id="prenom" prefWidth="70.39999389648438" text="Prenom" />
+                  <TreeTableColumn prefWidth="75.0" text="Sexe" />
+                  <TreeTableColumn fx:id="date_naissance" prefWidth="92.00006103515625" text="date_naissance" />
+                  <TreeTableColumn fx:id="email" prefWidth="83.20001220703125" text="Email" />
+                  <TreeTableColumn fx:id="tel" prefWidth="91.20001220703125" text="Tel" />
+                  <TreeTableColumn fx:id="matiere" prefWidth="116.80001831054688" text="matiere_enseigne" />
+                  <TreeTableColumn fx:id="salaire" prefWidth="88.00006103515625" text="Salaire" />
+              </columns>
+            </TreeTableView>
+            <JFXButton layoutX="779.0" layoutY="86.0" onAction="#add_prof" prefHeight="27.0" prefWidth="124.0" text="Add" />
+            <JFXButton disable="true" layoutX="779.0" layoutY="172.0" onAction="#changer_prof" prefHeight="27.0" prefWidth="124.0" text="Change" />
+            <JFXButton disable="true" layoutX="779.0" layoutY="278.0" onAction="#delete_prof" prefHeight="27.0" prefWidth="124.0" text="Delete" />
+            <ImageView fx:id="image" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#back_to_main" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+         </children>
+         <stylesheets>
+            <URL value="@../css/LoginStyling.css" />
+            <URL value="@../css/MaterialDesign.css" />
+            <URL value="@../css/menusdef.css" />
+            <URL value="@../css/mainwindow.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>
